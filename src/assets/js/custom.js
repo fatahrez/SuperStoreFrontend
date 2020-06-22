@@ -1,7 +1,8 @@
+
 function myTest() {
-    alert("Welcome");
+    alert('Welcome to custom js');
 }
 
 $(function() {
-    alert("Hello");
-})
+    alert('Hello, custom js');
+});

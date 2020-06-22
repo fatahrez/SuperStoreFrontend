@@ -10,7 +10,9 @@ import { ManagerComponent } from './manager/manager.component';
 import { ClerkComponent } from './clerk/clerk.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import {RoutingModule} from './routing/routing.module'
+import {RoutingModule} from './routing/routing.module';
+import { MerchantNavbarComponent } from './merchant-navbar/merchant-navbar.component';
+import { MerchantManagerComponent } from './merchant-manager/merchant-manager.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {RoutingModule} from './routing/routing.module'
     MerchantComponent,
     ManagerComponent,
     ClerkComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MerchantNavbarComponent,
+    MerchantManagerComponent
   ],
   imports: [
     BrowserModule,

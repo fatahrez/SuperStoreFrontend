@@ -6,6 +6,8 @@ import { ManagerComponent } from './manager/manager.component';
 import { ClerkComponent } from './clerk/clerk.component';
 import { MerchantNavbarComponent } from './merchant-navbar/merchant-navbar.component';
 import { MerchantManagerComponent } from './merchant-manager/merchant-manager.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'clerk', component: ClerkComponent},
   { path: 'merchant-navbar', component: MerchantNavbarComponent},
   { path: 'merchant-manager', component: MerchantManagerComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'signup', component: SignupComponent},
   { path: '', redirectTo:"/homepage", pathMatch:"full"},
   { path:'**', component:NotFoundComponent},
 

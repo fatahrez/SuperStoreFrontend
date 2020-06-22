@@ -12,7 +12,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import {RoutingModule} from './routing/routing.module';
 import { MerchantNavbarComponent } from './merchant-navbar/merchant-navbar.component';
-import { MerchantManagerComponent } from './merchant-manager/merchant-manager.component'
+import { MerchantManagerComponent } from './merchant-manager/merchant-manager.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MerchantManagerComponent } from './merchant-manager/merchant-manager.co
     ClerkComponent,
     NotFoundComponent,
     MerchantNavbarComponent,
-    MerchantManagerComponent
+    MerchantManagerComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

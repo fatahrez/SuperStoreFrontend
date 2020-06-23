@@ -16,8 +16,6 @@ const routes: Routes = [
   { path: 'merchant', component: MerchantComponent},
   { path: 'manager', component: ManagerComponent},
   { path: 'clerk', component: ClerkComponent},
-  { path: 'merchant-navbar', component: MerchantNavbarComponent},
-  { path: 'merchant-manager', component: MerchantManagerComponent},
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
   { path: '', redirectTo:"/homepage", pathMatch:"full"},

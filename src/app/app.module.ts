@@ -30,6 +30,10 @@ import { NavigationMerchantComponent } from './navigation-merchant/navigation-me
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { ManagerTableComponent } from './manager-table/manager-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -46,6 +50,7 @@ import { MatListModule } from '@angular/material/list';
     LoginComponent,
     SignupComponent,
     NavigationMerchantComponent,
+    ManagerTableComponent,
   
 
 
@@ -69,6 +74,9 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
 
    
 

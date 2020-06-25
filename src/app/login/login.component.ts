@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
   submitForm() {
     this.isSubmitting = true;
     this.errors = {errors: {}};
-    const credentials = '{"user" : {" ' + this.authForm.value + "}";
+    const credentials =  this.authForm.value ;
 
     console.log(credentials)
     this.userService.attemptAuth(this.authType, credentials)

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from 'ngx-webstorage';
 import { NavbarComponent } from '../navbar/navbar.component';
 
-declare const myTest : any
+declare var TxtRotate : any
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -11,15 +12,13 @@ declare const myTest : any
 })
 
 export class HomepageComponent implements OnInit {
-username; 
-  onClick(){
-    myTest();
-  }
+
 
 
 
   ngOnInit(): void {
-  
+    new TxtRotate()
+    
   }
 
 }

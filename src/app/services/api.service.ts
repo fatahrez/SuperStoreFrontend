@@ -14,6 +14,7 @@ export class ApiService {
     private http: HttpClient,
     private jwtService: JwtService
   ) { }
+  private httpOptions = {  headers: new HttpHeaders({'Content-Type': 'application/json'})}
 
   private formatErrors(error: any){
     return throwError(error.json())
@@ -31,7 +32,7 @@ export class ApiService {
   }
 
   post(path: string, body: Object = {}):  Observable<any> {
-    return this.http.post(`${environment.api_url}${path}`, JSON.stringify(body)).pipe(
+    return this.http.post(`${environment.api_url}${path}`,  JSON.stringify(body) ,this.httpOptions).pipe(
         catchError(this.formatErrors)
     );
   }

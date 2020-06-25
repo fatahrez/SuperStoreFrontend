@@ -4,6 +4,7 @@
   <div class="container page">
     <div class="row rowAuth">
 
+      
       <div class="card authCard p-4 col-md-5 col-xs-12">
 
 
@@ -83,7 +84,7 @@
             <div class="row">
               <div class="col-md-6">
                 <a [routerLink]="['/login']" *ngIf="authType == 'register'">Have an account?</a>
-                <a [routerLink]="['/signup']" *ngIf="authType == 'login'">Need an account?</a>
+                <a [routerLink]="['/register']" *ngIf="authType == 'login'">Need an account?</a>
 
               </div>
               <div class="col-md-6 text-right">

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule,  ReactiveFormsModule } from '@angular/forms'; 
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +20,16 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NavigationMerchantComponent } from './navigation-merchant/navigation-merchant.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -35,6 +45,9 @@ import { MaterialModule } from './material';
     MerchantManagerComponent,
     LoginComponent,
     SignupComponent,
+    NavigationMerchantComponent,
+  
+
 
   ],
   imports: [
@@ -47,12 +60,22 @@ import { MaterialModule } from './material';
     BrowserAnimationsModule ,
     ReactiveFormsModule,
     MaterialModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
 
    
 
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

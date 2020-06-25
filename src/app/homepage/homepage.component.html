@@ -24,13 +24,15 @@
     </div>
 
     <div class="advantage">
-        <h2> Why use Superstore? </h2>
+        <h2> Why Superstore? </h2>
+       
 
         <div class="team-work">
             <div class="row">
 
                 <div class="col-md-6 team">
                     <h3> Keep your team connected</h3>
+                    <hr>
                     <h4>Employees can process orders more quickly. Less errors means less hassle for your customer
                         service team. </h4>
 
@@ -63,6 +65,7 @@
                 </div>
                 <div class="col-md-6 track">
                     <h3> Track your inventory in real time</h3>
+                    <hr>
                     <h4>Automatically stay on top of stock levels. Set up alerts to keep track of stock levels and
                         important dates.</h4>
                 </div>
@@ -75,6 +78,7 @@
         <div class="row">
             <div class="col-md-6 cash">
                 <h3>Manage cash flows</h3>
+                <hr>
                 <h4>Save money by making smart business decisions. With real-time information, order what sells and what
                     to cut back on dead stock to maximize profits.
 
@@ -99,142 +103,133 @@
 
         <div class="container feature">
 
-            <h2 class="text-center my-5">Features to make inventory tracking a breeze </h2>
-
-            <br>
+            <h2 class="text-center my-5"><strong>Features to make inventory tracking a breeze</strong> </h2>
+            <hr>
             <div class="row">
                 <div class="col-md-4 text-center">
 
                     <div class="card">
-
+                        <img src="assets/images/team-management.png" width="80px">
                         <h3 class="my-3"> Give your team access</h3>
-                        <p>Grant access to multiple users and manage their permission levels by providing read-only or edit access.</p>
-
+                        <p>Grant access to multiple users and manage their permission levels.</p>
                     </div>
-
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="card">
-
+                        <img src="assets/images/brain.png" width="60px">
                         <h3 class="my-3">Track user activity</h3>
                         <p>Remain secure by always knowing what’s been changed, when and by whom.</p>
                     </div>
-
-
-
                 </div>
                 <div class="col-md-4 text-center">
 
                     <div class="card">
-
+                        <img src="assets/images/boss.png" width="80px">
                         <h3 class="my-3">Manage user access</h3>
                         <p>Give users limited or read-only permissions</p>
-
                     </div>
-
                 </div>
 
 
                 <div class="row">
                     <div class="col-md-4 text-center">
-    
                         <div class="card">
-    
-                            <h3 class="my-3"> Offline mode (Mobile and Tablet only</h3>
-                            <p>Use the mobile app in offline mode when there is no data connectivity. It will automatically sync when you get a data connection</p>
-    
+                            <img src="assets/images/internet.png" width="60px">
+                            <h3 class="my-3"> Offline mode (mobile) </h3>
+                            <p>When mobile app in offline mode, it will automatically sync when you get a data
+                                connection</p>
                         </div>
-    
                     </div>
                     <div class="col-md-4 text-center">
                         <div class="card">
-    
-                            <h3 class="my-3">Track across multiple locations, categories & conditions</h3>
-                            <p>Group items by location, condition (in and out) or custom categories using folders.</p>
+                            <img src="assets/images/tracking.png" width="80px">
+                            <h3 class="my-3">Track multiple locations</h3>
+                            <p>Group inventory and sales by location </p>
                         </div>
-    
-    
-    
                     </div>
                     <div class="col-md-4 text-center">
-    
+
                         <div class="card">
-    
+                            <img src="assets/images/graph.png" width="60px">
                             <h3 class="my-3">Visual inventory</h3>
-                            <p>Browse your inventory using graphical reports rather than words in a spreadsheet to track store's performance</p>
-    
+                            <p> Track store's performance and inventory using graphical reports </p>
+
                         </div>
-    
                     </div>
-    
-    
-
-
-
-                    
-
-            </div>
-
-        </div>
-    </div>
-
-
-    <router-outlet></router-outlet>
-
-
-
-    <footer class="page-footer font-small blue pt-4">
-
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
-
-            <!-- Grid row -->
-            <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
-
-                    <!-- Content -->
 
                 </div>
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
 
             </div>
-            <!-- Grid row -->
+        </div>
+
+
+        <div class="pointer">
+            <lottie-player id="firstLottie" slot="end" autoplay loop src="https://assets6.lottiefiles.com/packages/lf20_D3wtbe.json" style="width:400px; height: 400px;"></lottie-player>
 
         </div>
-        <!-- Footer Links -->
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">
-            © 2020 Copyright Superstore Inc. All rights reserved.
-
+        <div class="get-started">
+            <a class="nav-item nav-link" routerLink="/login" routerLinkActive='active'><button type="button"
+                    class="btn btn-secondary btn-lg">Get started</button></a>
         </div>
-        <!-- Copyright -->
 
-    </footer>
-    <!-- Footer -->
+        <router-outlet></router-outlet>
 
 
-    <script>"https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.0/angular-animate.min.js"</script>
-    <script src="assets/js/custom.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
 
-    <script>
-        LottieInteractivity.create({
-            mode: "scroll",
-            player: '#firstLottie',
-            actions: [
-                {
-                    visibility: [0, 1],
-                    type: "seek",
-                    frames: [0, 248],
-                },
-            ]
-        });
-    </script>
+        <footer class="page-footer font-small blue pt-4">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <!-- Content -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">
+                © 2020 Copyright Superstore Inc. All rights reserved.
+
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+
+        <script>"https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.0/angular-animate.min.js"</script>
+        <script src="assets/js/custom.js"></script>
+        <script
+            src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+
+        <script>
+            LottieInteractivity.create({
+                mode: "scroll",
+                player: '#firstLottie',
+                actions: [
+                    {
+                        visibility: [0, 1],
+                        type: "seek",
+                        frames: [0, 248],
+                    },
+                ]
+            });
+        </script>

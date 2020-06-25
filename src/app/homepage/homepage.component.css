@@ -1,13 +1,5 @@
-  body{
-    font-family: 'Noto Sans', sans-serif;
-   
-  }
-
-  
-
-
   h1 { 
-  font-family: 'DM Sans', sans-serif;
+    font-family: 'Lora', serif;
   font-size: 110px;
   margin-top: 10px;
   margin-bottom: 120px;
@@ -25,7 +17,7 @@ h2 {
 h3{
 font-family: Arial, Helvetica, sans-serif; 
 font-size: 25px;
-line-height: 1em;
+line-height: 2em;
 margin-bottom: 40px;
 
 }
@@ -39,11 +31,20 @@ line-height: 1em;
 
 
 .lottie-player{
-  margin-left: 70px;
+  margin-left: 80px;
 }
 
   
-  
+.advantage h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.advantage h4{
+  font-size: 25px;
+  line-height: 2em;
+
+}
 
 .inventory{
   margin-top: 30px;
@@ -53,6 +54,7 @@ line-height: 1em;
 .team{
   text-align: center;
   margin-top: 100px;
+ 
 }
 
 .track{
@@ -68,13 +70,15 @@ line-height: 1em;
 
 
 .features h2 {
-  font-size: 30px;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;  
+ 
 }
 
 .features .card {
   margin-bottom: 20px;
-  padding: 10px 0 0 10px;
-  height: 300px;
+  padding: 20px 0 0 20px;
+  height: 350px;
   border-radius: 10px;
   background-color: #fff5;
 }
@@ -86,4 +90,38 @@ line-height: 1em;
 
 .features .row h3 {
   font-weight: bold;
+}
+
+.card p{
+  font-size: 20px;
+  line-height: 2em;
+    font-family: Arial, Helvetica, sans-serif;  
+
+ 
+}
+.card img{
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+
+.feature h2{
+  font-size: 40px;
+  
+}
+
+.get-started{
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+.get-started button{
+  width: 400px;
+}
+
+.pointer{
+  margin-top: 50px;
+  margin-left:500px;
+  width: 60px;
+
 }

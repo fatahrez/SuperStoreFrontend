@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Work+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans&display=swap');
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Lora:wght@500&family=Montserrat&family=Noto+Sans+JP&family=Roboto&family=Work+Sans:wght@400;500&display=swap');
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

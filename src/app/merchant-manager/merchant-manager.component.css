@@ -12,11 +12,11 @@ body {
     margin: 0;
     padding: 0;
     width: 15%;
-    background-color: #f1f1f1;
+  
     position: fixed;
     height: 100%;
     overflow: auto;
-    background-color: grey;
+    background-color :#64b6ac;
   }
   
   li a {
@@ -27,6 +27,10 @@ body {
   }
   
   
+  li h5{
+    font-size: 25px;
+  }
+
   
   li a:hover:not(.active) {
     background-color: #555;
@@ -37,14 +41,25 @@ body {
     padding:1px 16px;
     height:1000px;
   }
-
-  .dashboard h5 {
-    color: black;
-    font-size: 20px;
-  }
-  .dash h5{
-    font-size: 25px;
-    color: black;
-  }
-
  
+  .dashboard h1{
+    font-family: Arial, Helvetica, sans-serif;  
+    margin-top: 30px;
+    font-size: 40px;
+    margin-left: 10px;
+  }
+
+
+
+  .dashboard h5{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+
+  .dashboard p {
+    text-align: center;
+    font-size: 25px;
+  }

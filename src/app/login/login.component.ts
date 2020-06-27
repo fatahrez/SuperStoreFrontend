@@ -40,7 +40,8 @@ export class LoginComponent implements OnInit {
        this.title = (this.authType === 'login') ? 'Sign in' : 'Sign Up';
        if (this.authType === 'register') {
          this.authForm.addControl('username', new FormControl('', Validators.required));
-         this.authForm.addControl('phone_number', new FormControl('', Validators.required));
+         this.authForm.addControl('first_name', new FormControl('', Validators.required));
+         this.authForm.addControl('last_name', new FormControl('', Validators.required));
        }
      });
 
@@ -52,9 +53,13 @@ export class LoginComponent implements OnInit {
     const credentials =  this.authForm.value ;
 
     console.log(credentials)
+    this.userService.attemptRegister(this.authType,credentials)
+    .subscribe(
+      data => this.router.navigateByUrl('/login')
+    )
     this.userService.attemptAuth(this.authType, credentials)
     .subscribe(
-      data => this.router.navigateByUrl('/'),
+      data => this.router.navigateByUrl('/merchant'),
       err => {
         this.errors = err;
         this.isSubmitting = false;

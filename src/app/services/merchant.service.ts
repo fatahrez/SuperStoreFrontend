@@ -16,7 +16,7 @@ export class MerchantService {
 
   getAll(): Observable<Merchant[]> {
     return this.apiService.get(`/merchant/`)
-      .pipe(tap(_ => log(`fetched merchant`)), map(data => {
+      .pipe(tap(_ => log(`fetched merchants`)), map(data => {
         return data;
       }));
   }

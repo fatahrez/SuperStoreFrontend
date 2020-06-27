@@ -1,37 +1,66 @@
-<div class="card">
-    <h4 class="card-header">Sign Up</h4>
-    <div class="card-body">
+<app-navbar></app-navbar>
+<div class="container-fluid">
 
-        <form>
-            <div class="form-group">
-
-                <label for="name">Name</label>
-                <input type="text" required class="form-control" id="name">
-
-            </div>
-            <div class="form-group">
-
-                <label for="name">Email</label>
-                <input type="text" required class="form-control" id="email">
-
-            </div>
-
-            <div class="form-group">
-
-                <label for="name">Password</label>
-                <input type="text" required class="form-control" id="password">
-
-            </div>
-
-            <div class="form-group">
-
-                <label for="name"> Confirm Password</label>
-                <input type="text" required class="form-control" id="password">
-
-            </div>
-            <button type="button" class="btn btn-secondary btn-lg">Sign Up</button>
-
-        </form>
+    <div class="merchant">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="nav-item nav-link" routerLink="/register" routerLinkActive='active'>
+            <h2> Merchant login</h2>
+        </a>
     </div>
-</div>
+    </div>
+    <div class="col-md-2">
+        <img src="assets/images/next.png" width="60px">
+    </div>
+    </div>
 
+    <div class="manager">
+        <a class="nav-item nav-link" routerLink="/manager" routerLinkActive='active'>
+            <h2> Manager login</h2></a>
+            <img src="assets/images/next.png" width="60px">
+    </div>
+
+    <div class="clerk">
+     
+        <a class="nav-item nav-link" routerLink="/clerk" routerLinkActive='active'>   
+            <h2> Clerk login</h2>
+        </a>
+        <img src="assets/images/next.png" width="60px">
+    </div>
+
+</div>
+<footer class="page-footer font-small blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Content -->
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        © 2020 Copyright Superstore Inc. All rights reserved.
+
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

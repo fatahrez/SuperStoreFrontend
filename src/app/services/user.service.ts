@@ -45,6 +45,19 @@ export class UserService {
     this.isAuthenticatedSubject.next(true);
   }
 
+  attemptRegister(type, credentials): Observable<User> {
+    const route = (type === 'register') ? '/register-merchant/' : '/merchant';
+    return this.apiService.post('' + route, {user: credentials})
+    .pipe(
+      map(
+        data => {
+          this.setAuth(data.user);
+          return data;
+        }
+      )
+    );
+  }
+
   attemptAuth(type, credentials): Observable<User> {
     const route = (type === 'login') ? '/login/' : '/merchant';
     return this.apiService.post('' + route, {user: credentials})

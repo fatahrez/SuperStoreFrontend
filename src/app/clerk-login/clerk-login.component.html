@@ -1,4 +1,3 @@
-
 <app-navbar></app-navbar>
 <br>
 <br>
@@ -19,7 +18,7 @@
               <input formControlName="username" placeholder="Username" class="form-control form-control-lg" type="text" *ngIf="authType == 'register'" />
             </fieldset> -->
 
-            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'manager-register'">
+            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'clerk-register'">
               <mat-label>Username</mat-label>
               <input matInput formControlName="username"  type="text"  required>
               <mat-icon matSuffix>account_circle</mat-icon>
@@ -27,7 +26,7 @@
 
             <br>
 
-            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'manager-register'">
+            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'clerk-register'">
               <mat-label>First name</mat-label>
               <input matInput formControlName="first_name"  type="text"  required>
               <mat-icon matSuffix>person</mat-icon>
@@ -35,7 +34,7 @@
 
             <br>
 
-            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'manager-register'">
+            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'clerk-register'">
               <mat-label>Last name</mat-label>
               <input matInput formControlName="last_name"  type="text"  required>
               <mat-icon matSuffix>person</mat-icon>
@@ -51,15 +50,17 @@
             </mat-form-field>
 
 
+            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'clerk-register'">
+              <mat-label>Shop name</mat-label>
+              <input matInput formControlName="shop"  type="text"  required>
+              <mat-icon matSuffix>store</mat-icon>
+            </mat-form-field>
 
-            <mat-form-field class="form-group" appearance="outline" *ngIf="authType == 'manager-register'">
-                <mat-label>Shop name</mat-label>
-                <input matInput formControlName="shop"  type="text"  required>
-                <mat-icon matSuffix>store</mat-icon>
-              </mat-form-field>
 
 
-              <mat-form-field  class="form-group" appearance="outline" *ngIf="authType == 'manager-login'">
+
+
+              <mat-form-field  class="form-group" appearance="outline" *ngIf="authType == 'clerk-login'">
                 <mat-label>Password</mat-label>
                 <input matInput formControlName="password"  [type]="hide ? 'password' : 'text'" type="password" required>
                 <mat-icon matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
@@ -67,7 +68,7 @@
               </mat-form-field>
 
 
-            <div class="row" [hidden]="authType == 'manager-login'">
+            <div class="row" [hidden]="authType == 'clerk-login'">
               <div class="col-md-5">
 
                   <mat-form-field  appearance="outline">
@@ -100,8 +101,8 @@
 
             <div class="row">
               <div class="col-md-6">
-                <a [routerLink]="['/manager-login']" *ngIf="authType == 'manager-register'">Have an account?</a>
-                <a [routerLink]="['/manager-register']" *ngIf="authType == 'manager-login'">Need an account?</a>
+                <a [routerLink]="['/clerk-login']" *ngIf="authType == 'clerk-register'">Have an account?</a>
+                <a [routerLink]="['/clerk-register']" *ngIf="authType == 'clerk-login'">Need an account?</a>
 
               </div>
               <div class="col-md-6 text-right">
@@ -121,5 +122,6 @@
     </div>
   </div>
 </div>
+
 
 

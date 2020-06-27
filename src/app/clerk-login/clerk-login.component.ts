@@ -5,12 +5,13 @@ import { UserService } from '../services/user.service';
 import { Errors } from '../models/errors.model';
 
 @Component({
-  selector: 'app-manager-login',
-  templateUrl: './manager-login.component.html',
-  styleUrls: ['./manager-login.component.css']
+  selector: 'app-clerk-login',
+  templateUrl: './clerk-login.component.html',
+  styleUrls: ['./clerk-login.component.css']
 })
-export class ManagerLoginComponent implements OnInit {
+export class ClerkLoginComponent implements OnInit {
 
+ 
   authType: String = '';
   title: String = '';
   isSubmitting: boolean = false;
@@ -36,8 +37,8 @@ export class ManagerLoginComponent implements OnInit {
      this.route.url.subscribe(data => {
 
        this.authType = data[data.length - 1].path;
-       this.title = (this.authType === 'manager-login') ? 'Sign in' : 'Sign Up';
-       if (this.authType === 'manager-register') {
+       this.title = (this.authType === 'clerk-login') ? 'Sign in' : 'Sign Up';
+       if (this.authType === 'clerk-register') {
          this.authForm.addControl('username', new FormControl('', Validators.required));
          this.authForm.addControl('first_name', new FormControl('', Validators.required));
          this.authForm.addControl('last_name', new FormControl('', Validators.required));
@@ -53,13 +54,13 @@ export class ManagerLoginComponent implements OnInit {
     const credentials =  this.authForm.value ;
 
     console.log(credentials)
-    this.userService.attemptRegisterManager(this.authType,credentials)
+    this.userService.attemptRegisterClerk(this.authType,credentials)
     .subscribe(
-      data => this.router.navigateByUrl('/manager-login')
+      data => this.router.navigateByUrl('/clerk-login')
     )
-    this.userService.attemptManager(this.authType, credentials)
+    this.userService.attemptClerk(this.authType, credentials)
     .subscribe(
-      data => this.router.navigateByUrl('/manager'),
+      data => this.router.navigateByUrl('/clerk'),
       err => {
         this.errors = err;
         this.isSubmitting = false;

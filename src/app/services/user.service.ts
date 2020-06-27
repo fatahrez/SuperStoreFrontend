@@ -105,7 +105,7 @@ export class UserService {
 
 
   attemptRegisterClerk(type, credentials): Observable<User> {
-    const route = (type === 'register') ? '/register-clerk/' : '/clerk';
+    const route = (type === 'clerk-register') ? '/register-clerk/' : '/clerk';
     return this.apiService.post('' + route, {user: credentials})
     .pipe(
       map(
@@ -122,7 +122,7 @@ export class UserService {
 
 
   attemptClerk(type, credentials): Observable<User> {
-    const route = (type === 'login') ? '/clerk-login/' : '/clerk';
+    const route = (type === 'clerk-login') ? '/login/' : '/clerk';
     return this.apiService.post('' + route, {user: credentials})
     .pipe(
       map(

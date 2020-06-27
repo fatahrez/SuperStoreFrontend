@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MerchantNavbarComponent } from './merchant-navbar.component';
+import { ManagerLoginComponent } from './manager-login.component';
 
-describe('MerchantNavbarComponent', () => {
-  let component: MerchantNavbarComponent;
-  let fixture: ComponentFixture<MerchantNavbarComponent>;
+describe('ManagerLoginComponent', () => {
+  let component: ManagerLoginComponent;
+  let fixture: ComponentFixture<ManagerLoginComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MerchantNavbarComponent ]
+      declarations: [ ManagerLoginComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MerchantNavbarComponent);
+    fixture = TestBed.createComponent(ManagerLoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

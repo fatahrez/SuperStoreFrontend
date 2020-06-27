@@ -58,8 +58,35 @@ export class UserService {
     );
   }
 
+
+  attemptRegisterManager(type, credentials): Observable<User> {
+    const route = (type === 'register') ? '/register-manager/' : '/manager';
+    return this.apiService.post('' + route, {user: credentials})
+    .pipe(
+      map(
+        data => {
+          this.setAuth(data.user);
+          return data;
+        }
+      )
+    );
+  }
+
   attemptAuth(type, credentials): Observable<User> {
     const route = (type === 'login') ? '/login/' : '/merchant';
+    return this.apiService.post('' + route, {user: credentials})
+    .pipe(
+      map(
+        data => {
+          this.setAuth(data.user);
+          return data;
+        }
+      )
+    );
+  }
+
+  attemptManager(type, credentials): Observable<User> {
+    const route = (type === 'login') ? '/login/' : '/manager';
     return this.apiService.post('' + route, {user: credentials})
     .pipe(
       map(

@@ -1,81 +1,59 @@
-<ul>
-    <li>
-        <a class="nav-item nav-link active" routerLink="/merchant" routerLinkActive='active'>
-            <h5 class="title">Dashboard</h5>
-        </a>
-    </li>
+<div>
+    <form [formGroup]='productForm'>
 
-    <li>
-        <a class="nav-item nav-link active" routerLink="/merchant-manager" routerLinkActive='active'>
-            <h5 class="card-title">Manager</h5>
-        </a>
-    </li>
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Item</mat-label>
+            <input matInput formControlName="item" type="text" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.item.hasError('required')">Item is required</mat-error>
 
+        <br>
 
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Buying price</mat-label>
+            <input matInput formControlName="buying_price" type="number" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.buying_price.hasError('required')">Buying price is required</mat-error>
 
-    <li>
-        <a class="active" href="#home">
-            <h5 class="card-title">Products</h5>
-        </a>
-    </li>
+        <br>
 
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Quantity bought </mat-label>
+            <input matInput formControlName="quantity_bought" type="number" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.quantity_bought.hasError('required')">Quantity bought is required
+        </mat-error>
 
-    <li>
-        <a class="active" href="#home">
-            <h5>Sales</h5>
-        </a>
-    </li>
+        <br>
 
-
-    <li>
-        <a class="active" href="#home">
-            <h5 class="card-title">Log out</h5>
-        </a>
-    </li>
-</ul>
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Supplier</mat-label>
+            <input matInput formControlName="supplier" type="text" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.supplier.hasError('required')">Supplier is required</mat-error>
 
 
-<div class="dashboard">
-    <h1>Clerk</h1>
-    <hr>
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Clerk</mat-label>
+            <input matInput formControlName="clerk" type="text" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.clerk.hasError('required')">Clerk is required</mat-error>
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card products">
-                <div class="card-body">
-                    <img src="assets/images/basket.png" width="60px">
-                    <h5 class="card-title">Total Products</h5>
-                    <p class="card-text">10</p>
-                </div>
-            </div>
+
+        <div class="col-md-5">
+            <div class="radio">
+                <label><input type="radio" [value]="true"  formControlName="paid_for">Paid</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" [value]="false"  formControlName="paid_for">Unpaid</label>
+              </div>
+
+        </div>
+        <div class="col-md-6 text-right">
+            <button mat-flat-button (click)='createProduct()' type="submit"> Submit
+
+            </button>
         </div>
 
-        <div class="col-md-4">
-            <div class="card sales">
-
-                <div class="card-body">
-                    <img src="assets/images/sale.png" width="60px">
-                    <h5 class="card-title">Total Sales</h5>
-                    <p class="card-text">20</p>
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-md-4">
-            <div class="card products">
-                <div class="card-body">
-                    <img src="assets/images/store.png" width="60px">
-                    <h5 class="card-title">Store</h5>
-                    <p class="card-text">5</p>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+    </form>
 </div>
-
-

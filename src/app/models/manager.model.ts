@@ -1,4 +1,4 @@
-export interface Merchant {
+export interface Manager {
     username: string,
     email: string,
     first_name: string,

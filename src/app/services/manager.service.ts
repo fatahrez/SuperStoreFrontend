@@ -14,15 +14,4 @@ export class ManagerService {
     private apiService: ApiService
   ) { }
 
-  getAll(): Observable<Merchant[]> {
-    return this.apiService.get(`/manager/`)
-      .pipe(tap(_ => log(`fetched managers`)), map(data => {
-        return data;
-      }));
   }
-
-  get(slug): Observable<Merchant> {
-    return this.apiService.get(`/manager/` + slug + `/`)
-      .pipe(map(data => data.merchant));
-  }
-}

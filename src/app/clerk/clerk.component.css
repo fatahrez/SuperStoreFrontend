@@ -1,75 +1,44 @@
-body {
-    margin: 0;
-  }
 
+.rowAuth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.authCard {
  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 15%;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    background-color :#64b6ac;
-    
-  }
-  
-  li a {
-    display: block;
-    color:black;
-    padding: 8px 16px;
-    text-decoration: none;
-    margin-top: 15px;
-    margin-bottom: 10px;
-  }
-  
-  li h5{
-    font-size: 25px;
- 
-  }
-  
-  
-  li a:hover:not(.active) {
-    background-color: #555;
-    color: black;
-  }
-  .dashboard{
-    margin-left:15%;
-    padding:1px 16px;
-    height:1000px;
-  }
+  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.1);
+}
 
-  .dashboard h1{
-    font-family: 'Lora', serif;
-    margin-top: 30px;
-    font-size: 40px;
-    margin-left: 10px;
-  }
+button {
+  color: #fff;
+  background-color: #166d9e
+}
 
+.mat-form-field {
+  width: 100%
+}
 
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #000 !important;
+}
 
-  .dashboard h5{
-    text-align: center;
-    font-size: 25px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #000 !important;
+}
 
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #000 !important;
+  ;
+}
 
-  .dashboard p {
-    text-align: center;
-    font-size: 25px;
-  }
+.visibilityIcon {
+  cursor: pointer;
+}
 
-
-  .dash h5{
-    font-size: 25px;
-    color: black;
-  }
-
- img{
-   margin-left: 140px;
-   margin-top: 5px;
-   margin-bottom: 10px;
- }
+::ng-deep .form-group, .submitBtn {
+  font-family: 'Quicksand', sans-serif;
+}

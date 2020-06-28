@@ -1,0 +1,142 @@
+  h1 { 
+  font-family: 'Lora', serif;
+  font-size: 110px;
+  margin-top: 5px;
+  margin-bottom: 120px;
+  
+
+}
+h2 { 
+  font-family: 'Lora', serif;
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+   
+}
+h3{
+  font-family: 'Lora', serif; 
+font-size: 25px;
+line-height: 2em;
+
+
+}
+
+
+h4{
+  font-family: 'Lora', serif;
+font-size: 20px;
+line-height: 1em;
+}
+
+
+.lottie-player{
+  margin-left: 80px;
+}
+
+  
+.advantage h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.advantage h4{
+  font-size: 25px;
+  line-height: 2em;
+
+}
+
+.inventory{
+  margin-top: 30px;
+  margin-bottom: 100px;
+ 
+}
+
+.team{
+  text-align: center;
+  margin-top: 100px;
+ 
+ 
+}
+
+.track{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.cash{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.feature{
+  margin-top: 80px;
+}
+
+.features h2 {
+  font-size: 40px;
+  font-family: 'Lora', serif;  
+ 
+}
+
+.features .card {
+  margin-bottom: 20px;
+  padding: 20px 0 0 20px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: #fff5;
+}
+
+.features .row img {
+  width: 80px;
+  height: 80px;
+}
+
+.features .row h3 {
+  font-weight: bold;
+}
+
+.card p{
+  font-size: 20px;
+  line-height: 2em;
+  font-family: 'Lora', serif;
+
+ 
+}
+.card img{
+  margin-left: 120px;
+  margin-bottom: 20px;
+}
+
+.feature h2{
+  font-size: 50px;
+  
+}
+
+.get-started{
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+.get-started button{
+  width: 500px;
+  height: 80px;
+  font-size: 40px;
+  margin-left:30px;
+  margin-top: 80px;
+}
+
+.pointer{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left:575px;
+
+  
+
+}
+
+footer{
+  height: 200px;
+  background-color :#64b6ac;
+}

@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule,  ReactiveFormsModule } from '@angular/forms'; 
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxWebstorageModule } from 'ngx-webstorage'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +14,28 @@ import { ManagerComponent } from './manager/manager.component';
 import { ClerkComponent } from './clerk/clerk.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import {RoutingModule} from './routing/routing.module'
+
+import { MerchantManagerComponent } from './merchant-manager/merchant-manager.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { ManagerTableComponent } from './manager-table/manager-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { ManagerLoginComponent } from './manager-login/manager-login.component';
+import { ClerkLoginComponent } from './clerk-login/clerk-login.component';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +45,46 @@ import {RoutingModule} from './routing/routing.module'
     MerchantComponent,
     ManagerComponent,
     ClerkComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MerchantManagerComponent,
+    LoginComponent,
+    SignupComponent,
+    ManagerTableComponent,
+    ManagerLoginComponent,
+    ClerkLoginComponent,
+  
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RoutingModule,
+    FormsModule,  
+    HttpModule,
+    HttpClientModule,
+    NgxWebstorageModule,
+    BrowserAnimationsModule ,
+    ReactiveFormsModule,
+    MaterialModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+
+   
+
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

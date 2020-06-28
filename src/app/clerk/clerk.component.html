@@ -1,1 +1,59 @@
-<p>clerk works!</p>
+<div>
+    <form [formGroup]='productForm'>
+
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Item</mat-label>
+            <input matInput formControlName="item" type="text" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.item.hasError('required')">Item is required</mat-error>
+
+        <br>
+
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Buying price</mat-label>
+            <input matInput formControlName="buying_price" type="number" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.buying_price.hasError('required')">Buying price is required</mat-error>
+
+        <br>
+
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Quantity bought </mat-label>
+            <input matInput formControlName="quantity_bought" type="number" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.quantity_bought.hasError('required')">Quantity bought is required
+        </mat-error>
+
+        <br>
+
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Supplier</mat-label>
+            <input matInput formControlName="supplier" type="text" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.supplier.hasError('required')">Supplier is required</mat-error>
+
+
+        <mat-form-field class="form-group" appearance="outline">
+            <mat-label>Clerk</mat-label>
+            <input matInput formControlName="clerk" type="text" required>
+        </mat-form-field>
+        <mat-error *ngIf="submitted && field.clerk.hasError('required')">Clerk is required</mat-error>
+
+
+        <div class="col-md-5">
+            <div class="radio">
+                <label><input type="radio" [value]="true"  formControlName="paid_for">Paid</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" [value]="false"  formControlName="paid_for">Unpaid</label>
+              </div>
+
+        </div>
+        <div class="col-md-6 text-right">
+            <button mat-flat-button (click)='createProduct()' type="submit"> Submit
+
+            </button>
+        </div>
+
+    </form>
+</div>

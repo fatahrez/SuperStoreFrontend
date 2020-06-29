@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {UserService, MerchantService} from '../services';
+import { User } from '../models/user.model';
+import { Merchant } from '../models/merchant.model';
 
 @Component({
   selector: 'app-merchant',
@@ -6,10 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./merchant.component.css']
 })
 export class MerchantComponent implements OnInit {
+  currentUser: User;
+  merchant: Merchant;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private userService: UserService,
+    private merchantService: MerchantService,
+ 
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
 }
+

@@ -3,6 +3,7 @@ import { CanActivate, ActivatedRouteSnapshot, Router, RouterStateSnapshot } from
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { UserService } from './user.service';
+import { JwtService } from './jwt.service'
 
 
 @Injectable({

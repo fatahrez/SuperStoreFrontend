@@ -14,7 +14,7 @@ import { ManagerComponent } from './manager/manager.component';
 import { ClerkComponent } from './clerk/clerk.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import { MerchantNavbarComponent } from './merchant-navbar/merchant-navbar.component';
+
 import { MerchantManagerComponent } from './merchant-manager/merchant-manager.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -26,10 +26,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
-import { NavigationMerchantComponent } from './navigation-merchant/navigation-merchant.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { ManagerTableComponent } from './manager-table/manager-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { ManagerLoginComponent } from './manager-login/manager-login.component';
+import { ClerkLoginComponent } from './clerk-login/clerk-login.component';
+import { ClerkSalesComponent } from './clerk-sales/clerk-sales.component';
+import { ManagerItemComponent } from './manager-item/manager-item.component';
 
 
 @NgModule({
@@ -41,11 +48,14 @@ import { MatListModule } from '@angular/material/list';
     ManagerComponent,
     ClerkComponent,
     NotFoundComponent,
-    MerchantNavbarComponent,
     MerchantManagerComponent,
     LoginComponent,
     SignupComponent,
-    NavigationMerchantComponent,
+    ManagerTableComponent,
+    ManagerLoginComponent,
+    ClerkLoginComponent,
+    ClerkSalesComponent,
+    ManagerItemComponent,
   
 
 
@@ -69,6 +79,9 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
 
    
 

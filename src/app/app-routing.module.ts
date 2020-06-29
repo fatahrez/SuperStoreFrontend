@@ -4,9 +4,12 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { MerchantComponent } from './merchant/merchant.component';
 import { ManagerComponent } from './manager/manager.component';
 import { ClerkComponent } from './clerk/clerk.component';
-import { MerchantNavbarComponent } from './merchant-navbar/merchant-navbar.component';
 import { MerchantManagerComponent } from './merchant-manager/merchant-manager.component';
 import { LoginComponent } from './login/login.component';
+import {ManagerLoginComponent} from './manager-login/manager-login.component';
+import {ManagerItemComponent} from './manager-item/manager-item.component';
+import {ClerkLoginComponent} from './clerk-login/clerk-login.component';
+import {ClerkSalesComponent} from './clerk-sales/clerk-sales.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -17,6 +20,13 @@ const routes: Routes = [
   { path: 'manager', component: ManagerComponent},
   { path: 'clerk', component: ClerkComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'manager-login', component: ManagerLoginComponent},
+  { path: 'manager-register', component: ManagerLoginComponent},
+  { path: 'manager-item', component: ManagerItemComponent},
+  { path: 'clerk-login', component: ClerkLoginComponent},
+  { path: 'clerk-register', component: ClerkLoginComponent},
+  { path: 'clerk-sales', component: ClerkSalesComponent},
+  { path: 'signup', component: SignupComponent},
   { path: 'register', component: LoginComponent},
   { path: 'merchant-manager', component: MerchantManagerComponent},
   { path: '', redirectTo:"/homepage", pathMatch:"full"},

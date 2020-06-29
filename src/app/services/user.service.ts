@@ -45,6 +45,22 @@ export class UserService {
     this.isAuthenticatedSubject.next(true);
   }
 
+  attemptRegister(type, credentials): Observable<User> {
+    const route = (type === 'register') ? '/register/' : '/merchant';
+    return this.apiService.post('' + route, {user: credentials})
+    .pipe(
+      map(
+        data => {
+          this.setAuth(data.user);
+          return data;
+        }
+      )
+    );
+  }
+
+
+
+
   attemptAuth(type, credentials): Observable<User> {
     const route = (type === 'login') ? '/login/' : '/merchant';
     return this.apiService.post('' + route, {user: credentials})
@@ -57,6 +73,67 @@ export class UserService {
       )
     );
   }
+
+
+
+
+  attemptRegisterManager(type, credentials): Observable<User> {
+    const route = (type === 'manager-register') ? '/register-manager/' : '/manager';
+    return this.apiService.post('' + route, {user: credentials})
+    .pipe(
+      map(
+        data => {
+          this.setAuth(data.user);
+          return data;
+        }
+      )
+    );
+  }
+
+  attemptManager(type, credentials): Observable<User> {
+    const route = (type === 'manager-login') ? '/login/' : '/manager';
+    return this.apiService.post('' + route, {user: credentials})
+    .pipe(
+      map(
+        data => {
+          this.setAuth(data.user);
+          return data;
+        }
+      )
+    );
+  }
+
+
+  attemptRegisterClerk(type, credentials): Observable<User> {
+    const route = (type === 'clerk-register') ? '/register-clerk/' : '/clerk';
+    return this.apiService.post('' + route, {user: credentials})
+    .pipe(
+      map(
+        data => {
+          this.setAuth(data.user);
+          return data;
+        }
+      )
+    );
+  }
+
+
+  
+
+
+  attemptClerk(type, credentials): Observable<User> {
+    const route = (type === 'clerk-login') ? '/login/' : '/clerk';
+    return this.apiService.post('' + route, {user: credentials})
+    .pipe(
+      map(
+        data => {
+          this.setAuth(data.user);
+          return data;
+        }
+      )
+    );
+  }
+
 
   getCurrentUser(): User {
     return this.currentUserSubject.value;

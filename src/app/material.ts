@@ -16,6 +16,7 @@ import { CdkTreeModule } from '@angular/cdk/tree';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
@@ -28,6 +29,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatSlideToggleModule,
     MatSelectModule,
     MatButtonModule,
+    MatRadioModule,
     MatCheckboxModule,
     MatMenuModule,
     MatTooltipModule,
@@ -51,6 +53,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatButtonModule,
     MatCheckboxModule,
     MatMenuModule,
+    MatRadioModule,
     MatTooltipModule,
     MatExpansionModule,
     MatTreeModule,

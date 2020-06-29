@@ -1,19 +1,21 @@
 <ul>
     <li>
-        <a class="nav-item nav-link active" routerLink="/merchant" routerLinkActive='active'>
+        <a class="nav-item nav-link active" routerLink="/manager" routerLinkActive='active'>
             <h5 class="title">Dashboard</h5>
         </a>
     </li>
 
+
+
     <li>
-        <a class="active" href="#home">
+        <a class="active" href="/manager-item">
             <h5 class="card-title">Products</h5>
         </a>
     </li>
 
 
     <li>
-        <a class="active" href="/clerk-sales">
+        <a class="active" href="#home">
             <h5>Sales</h5>
         </a>
     </li>
@@ -28,8 +30,11 @@
 
 
 <div class="dashboard">
-    <h1>Clerk</h1>
+    <h1>Manager</h1>
     <hr>
+
+
+
 
     <div class="auth-page mt-5">
         <div class="container page">
@@ -37,15 +42,16 @@
 
 
                 <div class="card authCard p-4 col-md-5 col-xs-12">
-                    <h1> Product Sales</h1>
+                    <h1> Manager Item</h1>
 
-                    <form [formGroup]='salesForm'>
+                    <form [formGroup]='itemForm'>
 
                         <mat-form-field class="form-group" appearance="outline">
                             <mat-label>Item</mat-label>
-                            <input matInput formControlName="item" type="text" required>
+                            <input matInput formControlName="item_name" type="text" required>
                         </mat-form-field>
-                        <mat-error *ngIf="submitted && field.item.hasError('required')">Item is required</mat-error>
+                        <mat-error *ngIf="submitted && field.item_name.hasError('required')">Item is required
+                        </mat-error>
 
                         <br>
 
@@ -59,24 +65,25 @@
                         <br>
 
                         <mat-form-field class="form-group" appearance="outline">
-                            <mat-label>Selling price</mat-label>
-                            <input matInput formControlName="selling_price" type="number" required>
+                            <mat-label>Shop </mat-label>
+                            <input matInput formControlName="shop" type="text" required>
                         </mat-form-field>
-                        <mat-error *ngIf="submitted && field.selling_price.hasError('required')">Selling price is
+                        <mat-error *ngIf="submitted && field.shop.hasError('required')">Shop is
                             required
                         </mat-error>
 
                         <br>
 
                         <mat-form-field class="form-group" appearance="outline">
-                            <mat-label>Shop</mat-label>
-                            <input matInput formControlName="shop" type="text" required>
+                            <mat-label>Damaged items</mat-label>
+                            <input matInput formControlName="damaged_items" type="text" required>
                         </mat-form-field>
-                        <mat-error *ngIf="submitted && field.shop.hasError('required')">shop is required
+                        <mat-error *ngIf="submitted && field.damaged_items.hasError('required')">Damaged items is
+                            required
                         </mat-error>
 
                         <div class="col-md-6 text-right">
-                            <button mat-flat-button (click)='addSale()' type="submit"> Submit
+                            <button mat-flat-button (click)='addItem()' type="submit"> Submit
 
                             </button>
                         </div>
@@ -89,5 +96,7 @@
     </div>
 
 
+    <div>
 
+    </div>
 </div>

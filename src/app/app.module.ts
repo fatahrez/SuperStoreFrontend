@@ -36,6 +36,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { ManagerLoginComponent } from './manager-login/manager-login.component';
 import { ClerkLoginComponent } from './clerk-login/clerk-login.component';
 import { ClerkSalesComponent } from './clerk-sales/clerk-sales.component';
+import { ManagerItemComponent } from './manager-item/manager-item.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { ClerkSalesComponent } from './clerk-sales/clerk-sales.component';
     ManagerLoginComponent,
     ClerkLoginComponent,
     ClerkSalesComponent,
+    ManagerItemComponent,
   
 
 

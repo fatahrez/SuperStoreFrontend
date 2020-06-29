@@ -35,6 +35,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ManagerLoginComponent } from './manager-login/manager-login.component';
 import { ClerkLoginComponent } from './clerk-login/clerk-login.component';
+import { ClerkSalesComponent } from './clerk-sales/clerk-sales.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { ClerkLoginComponent } from './clerk-login/clerk-login.component';
     ManagerTableComponent,
     ManagerLoginComponent,
     ClerkLoginComponent,
+    ClerkSalesComponent,
   
 
 

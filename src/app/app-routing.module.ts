@@ -8,6 +8,7 @@ import { MerchantManagerComponent } from './merchant-manager/merchant-manager.co
 import { LoginComponent } from './login/login.component';
 import {ManagerLoginComponent} from './manager-login/manager-login.component';
 import {ClerkLoginComponent} from './clerk-login/clerk-login.component';
+import {ClerkSalesComponent} from './clerk-sales/clerk-sales.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'manager-register', component: ManagerLoginComponent},
   { path: 'clerk-login', component: ClerkLoginComponent},
   { path: 'clerk-register', component: ClerkLoginComponent},
+  { path: 'clerk-sales', component: ClerkSalesComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'register', component: LoginComponent},
   { path: 'merchant-manager', component: MerchantManagerComponent},

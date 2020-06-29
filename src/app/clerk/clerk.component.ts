@@ -18,7 +18,7 @@ export class ClerkComponent implements OnInit {
 
 
   constructor(
-    private clientService : ClerkService,
+    private clerkService : ClerkService,
     private fb: FormBuilder,
     private _router: Router,
   ) { }
@@ -53,7 +53,7 @@ export class ClerkComponent implements OnInit {
     this.loading = true;
     this.productForm.value.quantity_bought = parseInt(this.productForm.value.quantity_bought)
     console.log("Form - ", this.productForm.value);
-    this.clientService.postProductBatch(this.productForm.value)
+    this.clerkService.postProductBatch(this.productForm.value)
       .pipe(first())
       .subscribe(
         (data) => {
@@ -69,7 +69,7 @@ export class ClerkComponent implements OnInit {
   }
     
   getProducts(){
-    this.clientService.getProductBatch()
+    this.clerkService.getProductBatch()
     .subscribe((response:ProductBatch[])=> {
       this.products = response
       console.log(this.products)

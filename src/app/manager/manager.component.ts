@@ -16,19 +16,32 @@ export class ManagerComponent implements OnInit {
   currentUser: User;
   manager: Manager;
 
+
+  public doughnutChartLabels = ['clothing', 'stationery', 'hardware', 'confectionery'];
+
+  public doughnutChartData = [150000, 120000, 90000, 200000];
+
+  public doughnutChartType = 'doughnut';
+
+  // bar
   public barChartOptions = {
     scaleShowVerticalLines: false,
     responsive: true,
 
   };
-  public barChartLabels = ['Apple', 'Banana', 'Kiwifruit', 'Blueberry', 'Orange', 'Grapes'];
+  public barChartLabels = ['Jan', 'Feb', 'March', 'April', 'June'];
   public barChartType = 'bar';
   public barChartLegend = true;
 
   public barChartData = [
-    { data: [45, 37, 60, 70, 46, 33], label: 'Best' }
+    { data: [15, 30, 40, 50, 70], label: 'Purchase' },
+    { data: [20, 40, 50, 60, 80], label: 'Sales' }
   ];
 
+  // pie
+  public pieChartLabels = ['paid', 'unpaid'];
+  public pieChartData = [80 , 20 ];
+  public pieChartType = 'pie';
 
   constructor(
     private route: ActivatedRoute,

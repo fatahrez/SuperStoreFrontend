@@ -79,14 +79,30 @@
 
     </div>
     <div class="container">
+        <h3>Inventory</h3>
         <div style="display: block;">
             <canvas baseChart 
-            [datasets] ="barChartData"
+            [data]  ="doughnutChartData"
+            [labels]    ="doughnutChartLabels"
+            [chartType]   ="doughnutChartType"></canvas>
+        </div>
+        <h3 style="padding: auto;">Purchases and Sales</h3>
+        <div style="display: block;">
+            <canvas baseChart 
+            [datasets]  ="barChartData"
             [labels]    ="barChartLabels"
             [options]   ="barChartOptions"
             [legend]    ="barChartLegend"
             [chartType] ="barChartType">
-          </canvas>
+            </canvas>
+        </div>
+        <h3>Payment</h3>
+        <div style="display: block">
+            <canvas baseChart
+            [data]      ="pieChartData"
+            [labels]    ="pieChartLabels"
+            [chartType] ="pieChartType">
+            </canvas>
         </div>
     </div>
 </div>

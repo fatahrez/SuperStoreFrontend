@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { Item } from '../models/item.model';
+import { UserService } from '../services';
 
 @Component({
   selector: 'app-manager-item',
@@ -21,6 +22,8 @@ export class ManagerItemComponent implements OnInit {
     private managerService : ManagerService,
     private fb: FormBuilder,
     private _router: Router,
+    private router: Router,
+    private userService: UserService,
   ) { }
 
   ngOnInit() {
@@ -76,6 +79,11 @@ export class ManagerItemComponent implements OnInit {
     })
   }
 
+  logout() {
+    this.userService.purgeAuth();
+    this.router.navigateByUrl('/');
+  }
+  
 }
 
 

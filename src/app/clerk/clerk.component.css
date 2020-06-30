@@ -18,11 +18,20 @@
     text-decoration: none;
     margin-top: 15px;
     margin-bottom: 10px;
+   
+ 
   }
   
   li h5{
-    font-size: 25px;
+    font-size: 18px;
+    margin-left: 32px;
+  
+    
  
+  }
+
+  .dash-img img{
+    margin-left: 40px;
   }
   
   
@@ -69,7 +78,6 @@
    margin-top: 5px;
    margin-bottom: 10px;
  }
-
  
 .rowAuth {
   display: flex;

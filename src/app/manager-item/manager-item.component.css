@@ -1,8 +1,9 @@
-ul {
+
+  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 15%;
+    width: 14%;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -17,11 +18,20 @@ ul {
     text-decoration: none;
     margin-top: 15px;
     margin-bottom: 10px;
+   
+ 
   }
   
   li h5{
-    font-size: 25px;
+    font-size: 18px;
+    margin-left: 32px;
+  
+    
  
+  }
+
+  .dash-img img{
+    margin-left: 40px;
   }
   
   

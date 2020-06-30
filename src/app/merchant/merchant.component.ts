@@ -56,5 +56,11 @@ export class MerchantComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout() {
+    this.userService.purgeAuth();
+    this.router.navigateByUrl('/');
+  }
+
+
 }
 

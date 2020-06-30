@@ -1,33 +1,51 @@
 <app-navbar></app-navbar>
+
+<lottie-player id="firstLottie" slot="end" autoplay loop  src="https://assets4.lottiefiles.com/packages/lf20_WAMQ5G.json" style="width:350px; height: 350px;">"></lottie-player>
+
 <div class="container-fluid">
+
 
     <div class="merchant">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <a class="nav-item nav-link" routerLink="/register" routerLinkActive='active'>
-            <h2> Merchant login</h2>
-        </a>
-    </div>
-    </div>
-    <div class="col-md-2">
-        <img src="assets/images/next.png" width="60px">
-    </div>
-    </div>
+                    <h2> Merchant login</h2>
+                </a>
+    
+            </div>
 
-    <div class="manager">
-        <a class="nav-item nav-link" routerLink="/manager-register" routerLinkActive='active'>
-            <h2> Manager login</h2></a>
-            <img src="assets/images/next.png" width="60px">
-    </div>
+            <div class="col-md-6">
+                <img src="assets/images/next.png" width="60px">
+            </div>
+        </div>
 
-    <div class="clerk">
-     
-        <a class="nav-item nav-link" routerLink="/clerk-register" routerLinkActive='active'>   
-            <h2> Clerk login</h2>
-        </a>
-        <img src="assets/images/next.png" width="60px">
-    </div>
+        <div class="manager">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="nav-item nav-link" routerLink="/manager-register" routerLinkActive='active'>
+                        <h2> Manager login</h2>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/next.png" width="60px">
+                </div>
+            </div>
+        </div>
 
+        <div class="clerk">
+            <div class="row">
+                <div class="col-md-6">
+                    <a class="nav-item nav-link" routerLink="/clerk-register" routerLinkActive='active'>
+                        <h2> Clerk login</h2>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/next.png" width="60px">
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 <footer class="page-footer font-small blue pt-4">
 

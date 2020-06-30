@@ -2,24 +2,24 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { ManagerTableDataSource, ManagerTableItem } from './manager-table-datasource';
+import { ItemTableDataSource, ItemTableItem } from './item-table-datasource';
 
 @Component({
-  selector: 'app-manager-table',
-  templateUrl: './manager-table.component.html',
-  styleUrls: ['./manager-table.component.css']
+  selector: 'app-item-table',
+  templateUrl: './item-table.component.html',
+  styleUrls: ['./item-table.component.css']
 })
-export class ManagerTableComponent implements AfterViewInit, OnInit {
+export class ItemTableComponent implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatTable) table: MatTable<ManagerTableItem>;
-  dataSource: ManagerTableDataSource;
+  @ViewChild(MatTable) table: MatTable<ItemTableItem>;
+  dataSource: ItemTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['full_name', 'email'];
+  displayedColumns = ['item', 'buying_price', 'quantity_bought', 'supplier'];
 
   ngOnInit() {
-    this.dataSource = new ManagerTableDataSource();
+    this.dataSource = new ItemTableDataSource();
   }
 
   ngAfterViewInit() {

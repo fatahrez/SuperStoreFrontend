@@ -1,13 +1,30 @@
 <ul>
     <li>
-        <a class="nav-item nav-link active" routerLink="/merchant" routerLinkActive='active'>
+        <a class="nav-item nav-link active" routerLink="/manager" routerLinkActive='active'>
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/dashboard.png" width="36px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
             <h5 class="title">Dashboard</h5>
         </a>
     </li>
 
     <li>
         <a class="nav-item nav-link active" routerLink="/merchant-manager" routerLinkActive='active'>
-            <h5 class="card-title">Manager</h5>
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/group-of-men.png" width="50px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <h5 class="card-title">Clerk</h5>
+            <h5 class="card-title">Management</h5>
         </a>
     </li>
 
@@ -15,20 +32,44 @@
 
     <li>
         <a class="active" href="/manager-item">
-            <h5 class="card-title">Products</h5>
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/order.png" width="48px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <h5 class="card-title">Orders</h5>
         </a>
     </li>
 
 
     <li>
         <a class="active" href="#home">
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/discount.png" width="40px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
             <h5>Sales</h5>
         </a>
     </li>
 
 
     <li>
-        <a class="active" href="#home">
+        <a (click)="logout()" routerLinkActive="active">
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/logout.png" width="30px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
             <h5 class="card-title">Log out</h5>
         </a>
     </li>
@@ -73,6 +114,9 @@
                 </div>
             </div>
         </div>
+
+
+        
 
 
     </div>

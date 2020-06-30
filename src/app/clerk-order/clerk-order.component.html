@@ -66,15 +66,18 @@
     <h1>Clerk</h1>
     <hr>
 
+
+
+
     <div class="auth-page mt-5">
         <div class="container page">
             <div class="row rowAuth">
 
 
                 <div class="card authCard p-4 col-md-5 col-xs-12">
-                    <h1> Product Sales</h1>
+                    <h1> Supply request</h1>
 
-                    <form [formGroup]='salesForm'>
+                    <form [formGroup]='productForm'>
 
                         <mat-form-field class="form-group" appearance="outline">
                             <mat-label>Item</mat-label>
@@ -85,33 +88,57 @@
                         <br>
 
                         <mat-form-field class="form-group" appearance="outline">
-                            <mat-label>Quantity</mat-label>
-                            <input matInput formControlName="quantity" type="number" required>
+                            <mat-label>Buying price</mat-label>
+                            <input matInput formControlName="buying_price" type="number" required>
                         </mat-form-field>
-                        <mat-error *ngIf="submitted && field.quantity.hasError('required')">Quantity is required
+                        <mat-error *ngIf="submitted && field.buying_price.hasError('required')">Buying price is required
                         </mat-error>
 
                         <br>
 
                         <mat-form-field class="form-group" appearance="outline">
-                            <mat-label>Selling price</mat-label>
-                            <input matInput formControlName="selling_price" type="number" required>
+                            <mat-label>Quantity bought </mat-label>
+                            <input matInput formControlName="quantity_bought" type="number" required>
                         </mat-form-field>
-                        <mat-error *ngIf="submitted && field.selling_price.hasError('required')">Selling price is
+                        <mat-error *ngIf="submitted && field.quantity_bought.hasError('required')">Quantity bought is
                             required
                         </mat-error>
 
                         <br>
 
                         <mat-form-field class="form-group" appearance="outline">
+                            <mat-label>Supplier</mat-label>
+                            <input matInput formControlName="supplier" type="text" required>
+                        </mat-form-field>
+                        <mat-error *ngIf="submitted && field.supplier.hasError('required')">Supplier is required
+                        </mat-error>
+
+                        <mat-form-field class="form-group" appearance="outline">
                             <mat-label>Shop</mat-label>
                             <input matInput formControlName="shop" type="text" required>
                         </mat-form-field>
-                        <mat-error *ngIf="submitted && field.shop.hasError('required')">shop is required
+                        <mat-error *ngIf="submitted && field.shop.hasError('required')">Shop is required
                         </mat-error>
 
+
+                        <mat-form-field class="form-group" appearance="outline">
+                            <mat-label>Clerk</mat-label>
+                            <input matInput formControlName="clerk" type="text" required>
+                        </mat-form-field>
+                        <mat-error *ngIf="submitted && field.clerk.hasError('required')">Clerk is required</mat-error>
+
+
+                        <div class="col-md-5">
+                            <div class="radio">
+                                <label><input type="radio" [value]="true" formControlName="paid_for">Paid</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" [value]="false" formControlName="paid_for">Unpaid</label>
+                            </div>
+
+                        </div>
                         <div class="col-md-6 text-right">
-                            <button mat-flat-button (click)='addSale()' type="submit"> Submit
+                            <button mat-flat-button (click)='createProduct()' type="submit"> Submit
 
                             </button>
                         </div>
@@ -122,7 +149,4 @@
             </div>
         </div>
     </div>
-
-
-
 </div>

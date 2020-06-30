@@ -1,15 +1,35 @@
+.container-fluid{
+  margin-top: 10px;
+}
 h2{
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'Lora', serif; 
     text-align: center;
-    margin-top: 100px;
+    margin-left: 280px;
+   
     color: black;
 }
 
+.row{
+  margin-left: 90px;
+}
+.col-md-6{
+  margin-top: 120px;
+ 
+}
 
 
 footer{
     height: 200px;
     background-color :#64b6ac;
-    margin-top: 500px;
+    margin-top: 250px;
+  }
+
+  lottie-player{
+    margin-left: 500px;
+    margin-top: 50px;
+  }
+  
+.footer-copyright {
+    margin-top: 80px;
   }

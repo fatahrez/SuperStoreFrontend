@@ -14,25 +14,25 @@ import { map } from 'rxjs/operators';
 export class ClerkService {
 
   constructor(
-    private apiService: ApiService,
-    private http: HttpClient,
-  ) { }
+  private apiService: ApiService,
+  private http: HttpClient,
+ ){}
 
-  postProductBatch(batch: ProductBatch): Observable<ProductBatch> {
-    const route = '/api/product-batch/'
-    return this.apiService.post('' + route, batch)
-      .pipe(
-        map(
-          data => {
-            return data;
-          }
-        )
-      );
-  }
+    postProductBatch(batch:ProductBatch):Observable<ProductBatch> {
+      const route = '/api/product-batch/'
+      return this.apiService.post('' + route, batch)
+        .pipe(
+          map(
+            data => {
+              return data;
+            }
+          )
+        );
+    }
+  
 
 
-
-  getProductBatch(): Observable<ProductBatch[]> {
+  getProductBatch():Observable<ProductBatch[]> {
     const route = '/api/product-batch/'
     return this.apiService.get('' + route)
       .pipe(
@@ -45,23 +45,8 @@ export class ClerkService {
   }
 
 
-
-  postSales(sales: Sales): Observable<Sales> {
-    const route = '/api/sales/'
-    console.log(sales)
-    return this.apiService.post('' + route, sales)
-      .pipe(
-        map(
-          data => {
-            return data;
-          }
-        )
-      );
-  }
-
-
-  getSales(): Observable<Sales[]> {
-    const route = '/api/sales/'
+  getProductById(id):Observable<ProductBatch> {
+    const route = '/api/product-batch/' + id + '/'
     return this.apiService.get('' + route)
       .pipe(
         map(
@@ -71,4 +56,45 @@ export class ClerkService {
         )
       );
   }
+
+
+
+  updateProductBatch(batch:ProductBatch, id ):Observable<ProductBatch> {
+    const route = '/api/product-batch/' + id + '/'
+    return this.apiService.put('' + route, batch)
+      .pipe(
+        map(
+          data => {
+            return data;
+          }
+        )
+      );
+  }
+
+
+postSales(sales:Sales):Observable<Sales> {
+  const route = '/api/sales/'
+  console.log(sales)
+  return this.apiService.post('' + route, sales)
+    .pipe(
+      map(
+        data => {
+          return data;
+        }
+      )
+    );
 }
+
+
+getSales():Observable<Sales[]> {
+  const route = '/api/sales/'
+  return this.apiService.get('' + route)
+    .pipe(
+      map(
+        data => {
+          return data;
+        }
+      )
+    );
+      }
+    }

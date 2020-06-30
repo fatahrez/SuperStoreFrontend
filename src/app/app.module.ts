@@ -37,6 +37,10 @@ import { ManagerLoginComponent } from './manager-login/manager-login.component';
 import { ClerkLoginComponent } from './clerk-login/clerk-login.component';
 import { ClerkSalesComponent } from './clerk-sales/clerk-sales.component';
 import { ManagerItemComponent } from './manager-item/manager-item.component';
+import { OrderEditFormComponent } from './order-edit-form/order-edit-form.component';
+import { ClerkOrderComponent } from './clerk-order/clerk-order.component';
+import { ItemTableComponent } from './item-table/item-table.component';
+import { MerchantTableComponent } from './merchant-table/merchant-table.component';
 
 
 @NgModule({
@@ -56,6 +60,10 @@ import { ManagerItemComponent } from './manager-item/manager-item.component';
     ClerkLoginComponent,
     ClerkSalesComponent,
     ManagerItemComponent,
+    OrderEditFormComponent,
+    ClerkOrderComponent,
+    ItemTableComponent,
+    MerchantTableComponent,
   
 
 

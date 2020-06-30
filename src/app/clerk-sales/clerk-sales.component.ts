@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { Sales } from '../models/sale.model';
+import { UserService } from '../services';
 
 @Component({
   selector: 'app-clerk-sales',
@@ -19,7 +20,8 @@ export class ClerkSalesComponent implements OnInit {
   constructor(
     private clerkService : ClerkService,
     private fb: FormBuilder,
-    private _router: Router,
+    private router: Router,
+    private userService: UserService,
   ) { }
 
   ngOnInit(){
@@ -58,7 +60,7 @@ export class ClerkSalesComponent implements OnInit {
         (data) => {
           console.log("productSales data-", data);
           this.loading = false;
-          this._router.navigate(['/clerk-sales']);
+          this.router.navigate(['/clerk-sales']);
         },
         (error) => {
           this.loading = false;
@@ -75,6 +77,11 @@ export class ClerkSalesComponent implements OnInit {
     })
   }
 
+
+  logout() {
+    this.userService.purgeAuth();
+    this.router.navigateByUrl('/');
+  }
 }
 
 

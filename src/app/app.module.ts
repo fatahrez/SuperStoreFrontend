@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule,  ReactiveFormsModule } from '@angular/forms'; 
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxWebstorageModule } from 'ngx-webstorage'
+import { NgxWebstorageModule } from 'ngx-webstorage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { MerchantComponent } from './merchant/merchant.component';
 import { ManagerComponent } from './manager/manager.component';
 import { ClerkComponent } from './clerk/clerk.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 import { MerchantManagerComponent } from './merchant-manager/merchant-manager.component';
@@ -71,7 +72,8 @@ import { MerchantTableComponent } from './merchant-table/merchant-table.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,  
+    FormsModule,
+    // tslint:disable-next-line: deprecation
     HttpModule,
     HttpClientModule,
     NgxWebstorageModule,
@@ -90,10 +92,7 @@ import { MerchantTableComponent } from './merchant-table/merchant-table.componen
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-
-   
-
-
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

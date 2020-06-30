@@ -3,6 +3,5 @@ export interface Item{
     item_name: string;
     quantity: number;
     shop?: string;
-    damaged_items:string;
-   
+    damaged_items: string;
 }

@@ -15,7 +15,19 @@ export class ManagerComponent implements OnInit {
 
   currentUser: User;
   manager: Manager;
-  
+
+  public barChartOptions = {
+    scaleShowVerticalLines: false,
+    responsive: true,
+
+  };
+  public barChartLabels = ['Apple', 'Banana', 'Kiwifruit', 'Blueberry', 'Orange', 'Grapes'];
+  public barChartType = 'bar';
+  public barChartLegend = true;
+
+  public barChartData = [
+    { data: [45, 37, 60, 70, 46, 33], label: 'Best' }
+  ];
 
 
   constructor(
@@ -27,10 +39,5 @@ export class ManagerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-  
   }
-  
-
-
-
 }

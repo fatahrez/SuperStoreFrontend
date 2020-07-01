@@ -46,7 +46,7 @@ export class UserService {
   }
 
   attemptRegister(type, credentials): Observable<User> {
-    const route = (type === 'register') ? '/register/' : '/merchant';
+    const route = (type === 'register') ? '/register-merchant/' : '/merchant';
     return this.apiService.post('' + route, {user: credentials})
     .pipe(
       map(

@@ -16,7 +16,7 @@ export class ManagerTableComponent implements AfterViewInit, OnInit {
   dataSource: ManagerTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['full_name', 'email'];
 
   ngOnInit() {
     this.dataSource = new ManagerTableDataSource();

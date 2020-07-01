@@ -5,8 +5,7 @@
 export const environment = {
   production: false,
   api_url:'https://api-shop-url.herokuapp.com',
-  api_merchant: 'https://api-shop-url.herokuapp.com/api/merchant/',
-  api_login: 'https://api-shop-url.herokuapp.com/token/login'
+
 };
 
 /*

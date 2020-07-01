@@ -9,9 +9,5 @@ export interface ProductBatch{
     date_received?: Date;
     supplier: string;
 
-    
-
-
-   
 
 }

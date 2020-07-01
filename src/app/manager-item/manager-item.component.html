@@ -1,0 +1,150 @@
+<ul>
+    <li>
+        <a class="nav-item nav-link active" routerLink="/manager" routerLinkActive='active'>
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/dashboard.png" width="36px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <h5 class="title">Dashboard</h5>
+        </a>
+    </li>
+
+    <li>
+        <a class="nav-item nav-link active" routerLink="/merchant-manager" routerLinkActive='active'>
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/group-of-men.png" width="50px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <h5 class="card-title">Clerk</h5>
+            <h5 class="card-title">Management</h5>
+        </a>
+    </li>
+
+
+
+    <li>
+        <a class="active" href="/manager-item">
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/order.png" width="48px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <h5 class="card-title">Orders</h5>
+        </a>
+    </li>
+
+
+    <li>
+        <a class="active" href="#home">
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/discount.png" width="40px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <h5>Sales</h5>
+        </a>
+    </li>
+
+
+    <li>
+        <a (click)="logout()" routerLinkActive="active">
+            <div class="row">
+                <div class="col-sm-6 dash-img">
+                    <img src="assets/images/logout.png" width="30px">
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <h5 class="card-title">Log out</h5>
+        </a>
+    </li>
+</ul>
+
+
+
+<div class="dashboard">
+    <h1>Manager</h1>
+    <hr>
+
+
+
+
+    <div class="auth-page mt-5">
+        <div class="container page">
+            <div class="row rowAuth">
+
+
+                <div class="card authCard p-4 col-md-5 col-xs-12">
+                    <h1> Manager Item</h1>
+
+                    <form [formGroup]='itemForm'>
+
+                        <mat-form-field class="form-group" appearance="outline">
+                            <mat-label>Item</mat-label>
+                            <input matInput formControlName="item_name" type="text" required>
+                        </mat-form-field>
+                        <mat-error *ngIf="submitted && field.item_name.hasError('required')">Item is required
+                        </mat-error>
+
+                        <br>
+
+                        <mat-form-field class="form-group" appearance="outline">
+                            <mat-label>Quantity</mat-label>
+                            <input matInput formControlName="quantity" type="number" required>
+                        </mat-form-field>
+                        <mat-error *ngIf="submitted && field.quantity.hasError('required')">Quantity is required
+                        </mat-error>
+
+                        <br>
+
+                        <mat-form-field class="form-group" appearance="outline">
+                            <mat-label>Shop </mat-label>
+                            <input matInput formControlName="shop" type="text" required>
+                        </mat-form-field>
+                        <mat-error *ngIf="submitted && field.shop.hasError('required')">Shop is
+                            required
+                        </mat-error>
+
+                        <br>
+
+                        <mat-form-field class="form-group" appearance="outline">
+                            <mat-label>Damaged items</mat-label>
+                            <input matInput formControlName="damaged_items" type="text" required>
+                        </mat-form-field>
+                        <mat-error *ngIf="submitted && field.damaged_items.hasError('required')">Damaged items is
+                            required
+                        </mat-error>
+
+                        <div class="col-md-6 text-right">
+                            <button mat-flat-button (click)='addItem()' type="submit"> Submit
+
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+
+    </div>
+</div>
